@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFBB86FC"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/appname"
+        android:layout_width="414dp"
+        android:layout_height="75dp"
+        android:background="#FF03DAC5"
+        android:text="Tip Calculator "
+        android:textAlignment="center"
+        android:textColor="#D50000"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="VisualLintBounds" />
+
+    <TextView
+        android:id="@+id/billAmt"
+        android:layout_width="134dp"
+        android:layout_height="46dp"
+        android:text="Bill"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/tipPer"
+        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appname"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tipPer"
+        android:layout_width="129dp"
+        android:layout_height="60dp"
+        android:text="5%"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/tipAmt"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billAmt"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tipAmt"
+        android:layout_width="135dp"
+        android:layout_height="59dp"
+        android:text="Tip"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/totalBill"
+        app:layout_constraintEnd_toStartOf="@+id/tipOutput"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipPer"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/totalBill"
+        android:layout_width="135dp"
+        android:layout_height="59dp"
+        android:text="Total"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/billOutput"
+        app:layout_constraintHorizontal_bias="0.5"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipAmt"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/textView5"
+        android:layout_width="143dp"
+        android:layout_height="70dp"
+        android:hint="Enter bill  "
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/billAmt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/billAmt"
+        app:layout_constraintTop_toTopOf="@+id/billAmt"
+        app:layout_constraintVertical_bias="0.708" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="135dp"
+        android:layout_height="59dp"
+        android:max="25"
+        android:textAlignment="center"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tipPer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tipPer"
+        app:layout_constraintTop_toTopOf="@+id/tipPer"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tipOutput"
+        android:layout_width="135dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="44dp"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tipAmt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tipAmt"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="20" />
+
+    <TextView
+        android:id="@+id/billOutput"
+        android:layout_width="135dp"
+        android:layout_height="59dp"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/totalBill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/totalBill"
+        app:layout_constraintTop_toTopOf="@+id/totalBill"
+        tools:text="100" />
+
+    <TextView
+        android:id="@+id/bottomLine"
+        android:layout_width="386dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="16dp"
+        android:text="Made for love of Android - Devang Bondre "
+        android:textColor="#D50000"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/qualityTip"
+        android:layout_width="135dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        android:textSize="21sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        tools:text="Good" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
